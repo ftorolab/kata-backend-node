@@ -7,9 +7,9 @@ export class ReservationService {
           reservations.id,
           reservations.schedule,
           reservations.selected_seats,
+          reservations.email,
           rooms.name AS room_name,
-          movies.title AS movie_title,
-          reservations.email AS email
+          movies.title AS movie_title
       FROM reservations
       JOIN movies ON reservations.movie_id = movies.id
       JOIN rooms ON movies.id_room = rooms.id
